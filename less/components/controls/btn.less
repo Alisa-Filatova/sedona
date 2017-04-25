@@ -1,0 +1,22 @@
+@import '../../colors';
+
+.btn {
+    background-color: @blue;
+    font-weight: 700;
+    font-size: 21px;
+    color: @white;
+    text-decoration: none;
+    padding: 20px 130px;
+    border-radius: 3px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: @blue_deep;
+        transition: 0.3s;
+    }
+
+    &:active {
+        background-color: @blue_dark;
+        color: rgba(255, 255, 255, 0.5);
+    }
+}

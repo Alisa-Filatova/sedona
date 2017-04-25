@@ -1,0 +1,45 @@
+@import '../colors';
+
+.social-btn {
+    width: 46px;
+    height: 46px;
+    background-color: @blue;
+    display: inline-block;
+    vertical-align: middle;
+
+    &:hover {
+       background-color: @blue_deep;
+       transition: 0.3s;
+    }
+
+    &:active {
+        background-color: @blue_dark;
+    }
+
+    &__icon {
+        background-image: url('../img/spritesheet2.png');
+        background-repeat: no-repeat;
+        display: inline-block;
+        margin-top: 35%;
+
+        &_twitter {
+            width: 18px;
+            height: 14px;
+            background-position: -38px -159px;
+        }
+
+        &_facebook {
+            width: 9px;
+            height: 18px;
+            background-position: -164px -5px;
+        }
+
+        &_youtube {
+            width: 20px;
+            height: 14px;
+            background-position: -66px -159px;
+        }
+
+    }
+
+}

@@ -1,0 +1,80 @@
+@import '../../colors';
+@import '../../variables';
+
+.range-filter {
+
+    &__price-control {
+        background: transparent;
+        color: @white;
+        font-family: @font-family_base;
+        font-size: 18px;
+        text-transform: uppercase;
+        width: 155px;
+        border-radius: 3px;
+        border: 2px solid @white;
+        padding: 10px;
+
+        @media(max-width: @screen_tablet) {
+            width: 100px;
+        }
+
+        @media(max-width: @screen_mobile) {
+            width: 140px;
+            margin-top: 5px;
+        }
+    }
+
+    &__title {
+        text-align: center;
+    }
+
+    &__controls {
+        margin: 25px 0;
+        background-color: rgba(255, 255, 255, 0.5);
+        position: relative;
+    }
+
+    &__scale {
+        background-color: @white;
+        width: 265px;
+        height: 2px;
+
+        @media(max-width: @screen_tablet) {
+            width: 150px;
+        }
+    }
+
+    &__toggle {
+        position: absolute;
+        top: -10px;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: @grey;
+        border: 8px solid @white;
+        cursor: pointer;
+
+        &_min-toggle {
+           left: -1px;
+        }
+
+        &_max-toggle {
+           right: 90px;
+
+           @media(max-width: @screen_mobile) {
+                right: 30px;
+            }
+        }
+
+         &:hover {
+          background-color: @blue;
+          transition: 0.3s;
+        }
+
+        &:active {
+          background-color: @grey_dark;
+        }
+    }
+}
+
+

@@ -1,0 +1,49 @@
+@import '../../colors';
+
+.checkbox {
+    display: none;
+
+    & + label span {
+        width: 40px;
+        height: 40px;
+        background-color: @grey_light;
+        display: inline-block;
+        vertical-align: middle;
+        border-radius: 3px;
+        cursor: pointer;
+        position: relative;
+
+        &:hover {
+           background-color: @grey;
+        }
+
+        &:active {
+           background-color: @grey_deep;
+        }
+
+        &:focus {
+            background-color: #cbe2f4;
+        }
+
+    }
+
+    &:checked + label span::after {
+        content: '';
+        width: 25px;
+        height: 19px;
+        display: block;
+        position: absolute;
+        top: 11px;
+        left: 8px;
+        background-image: url('../img/tick-black.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+    }
+}
+
+
+
+
+
+

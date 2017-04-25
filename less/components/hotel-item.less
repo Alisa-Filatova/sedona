@@ -1,0 +1,110 @@
+@import '../variables';
+@import '../colors';
+@import '../common';
+@import 'stars-icons';
+
+.hotel-item {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 30px 0;
+    border-top: 2px solid @grey_light;
+    font-family: 'PT Sans', 'PT Sans Narrow', sans-serif;
+
+    &__title {
+        font-size: 21px;
+        font-weight: 700;
+        text-align: left;
+        margin: 0;
+
+        @media(max-width: @screen_tablet) {
+            font-size: 27px;
+            line-height: 50px;
+        }
+    }
+
+    &__btn {
+        padding: 5px 20px;
+        border-radius: 0;
+        font-size: 14px;
+
+        &_book {
+            background-color: @brown;
+
+            &:hover {
+                background-color: #604e43;
+                transition: 0.3s;
+            }
+
+            &:active {
+                color: rgba(255, 255, 255, 0.5);
+                background-color: #503e33;
+            }
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: stretch;
+        justify-content: space-between;
+        flex-basis: 435px;
+
+        @media(max-width: @screen_tablet) {
+            flex-basis: 583px;
+            align-items: center;
+        }
+    }
+
+    &__description {
+        text-align: left;
+        margin: 8px 0;
+        display: flex;
+        flex-flow: row wrap;
+        flex-basis: 275px;
+        justify-content: space-between;
+
+        @media(max-width: @screen_tablet) {
+            font-size: 18px;
+        }
+    }
+
+    &__btns {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+
+    &__group {
+        flex-basis: 275px;
+
+        @media(max-width: @screen_mobile) {
+            margin-top: 10px;
+        }
+    }
+
+    &_last-child {
+       border-bottom: 2px solid @grey_light;
+    }
+
+    @media(max-width: @screen_tablet) {
+        padding: 30px 20px;
+    }
+
+    &__photo {
+
+        @media(max-width: @screen_mobile) {
+            width: 100%;
+        }
+    }
+}
+
+.rate {
+
+    &__text {
+        background-color: @grey;
+        padding: 5px 10px;
+        display: block;
+    }
+}

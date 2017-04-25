@@ -1,0 +1,55 @@
+@import '../../colors';
+
+.radio-btn {
+    display: none;
+
+    & + label span {
+        width: 40px;
+        height: 40px;
+        background-color: @grey_light;
+        border-radius: 50%;
+        display: inline-block;
+        vertical-align: middle;
+        cursor: pointer;
+        opacity: 0.8;
+        position: relative;
+
+        &:hover {
+            background-color: @grey;
+            transition: 0.2s;
+        }
+
+        &:active {
+           background-color: @grey_deep;
+        }
+
+        &:focus {
+            background-color: #cbe2f4;
+        }
+
+    }
+
+    &:checked + label span::after {
+        content: '';
+        position: absolute;
+        top: 13px;
+        left: 13px;
+        width: 15px;
+        height: 15px;
+        background: @black;
+        border-radius: 50%;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+

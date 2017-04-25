@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Sedona</title>
+</head>
+<body>
+    <header class="page-header container">
+
+        <nav class="main-nav">
+            
+            <button class="toggle toggle_close-bar" type="button"></button>
+            <button class="toggle toggle_open-bar" type="button"></button>
+            
+            
+            <div class="main-nav__wrapper">
+                <ul class="main-nav__items">
+                    <li class="main-nav__item">
+                        <a href="index.html#" class="main-nav__link main-nav__link_active">Главная</a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a href="photo-video.html#" class="main-nav__link">
+                        Фото и видео</a>
+                    </li>
+                    <li class="main-nav__item main-nav__item_logo">
+                        <a href="index.html#" class="main-nav__link main-nav__link_logo">
+                            <picture>
+                                <source 
+                                    media="(max-width:768px)" 
+                                    srcset="img/logotype-tablet.png"
+                                >
+                                <img 
+                                    class="main-nav__logo" 
+                                    src="img/logotype-desktop.png" 
+                                    alt="Sedona"
+                                >
+                            </picture>
+                        </a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a href="form.html#" class="main-nav__link">Форма отзыва</a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a href="hotels.html#" class="main-nav__link">Гостиницы</a>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+        <section class="promo promo_index">
+            <picture>
+                <source 
+                    media="(max-width:320px)" 
+                    srcset="img/logo-mobile.png"
+                >
+                <source 
+                    media="(max-width:768px)" 
+                    srcset="img/logo-tablet.png"
+                >
+                <img
+                    class="main-page__logo"
+                    src="img/logo.png"
+                    alt="Sedona"
+                >
+            </picture>
+        </section>
+    </header>
+    
+    <main class="main-page container">
+        
+        <div class="main-page__heading">
+            
+            <h1 class="main-page__title">
+                Cедона - небольшой городок в аризоне,<br> 
+                заслуживающий большего!
+            </h1>
+            <p class="main-page__description">
+                Рассмотрим 5 причин, по которым Седона круче, 
+                чем Гранд Каньон!
+            </p>
+
+        </div>
+
+        <section class="features">
+            
+            <div class="features__wrapper features__wrapper_picture">
+                
+                <div class="features__item features__item_photo">
+                    <h2 class="features__title">Настоящий городок</h2>
+                    <span class="features__number">-№1-</span>
+                    <p class="features__text">
+                        Седона - не аттракцион для туристов, 
+                        там течет своя жизнь
+                    </p>
+                </div>
+                
+                <div class="features__picture">
+                    <picture>
+                        <source 
+                            media="(max-width:320px)" 
+                            srcset="img/photo-city-mobile.jpg"
+                        >
+                        <source 
+                            media="(max-width:768px)" 
+                            srcset="img/photo-city-tablet.jpg"
+                        >
+                        <img 
+                            src="img/photo-city.jpg" 
+                            alt="Город Седона" 
+                            class="features__photo" 
+                        >
+                    </picture>
+                </div>
+
+            </div>
+            
+            <div class="features__wrapper">
+                <div class="features__item">
+                    <i class="features__icon features__icon_home"></i>
+                    <h2 class="features__title">Жилье</h2>
+                    <p class="features__text">
+                        Рекомендуем пожить 
+                        в настоящем мотеле, 
+                        все как в кино!
+                    </p>
+                </div>
+
+                <div class="features__item">
+                    <i class="features__icon features__icon_food"></i>
+                    <h2 class="features__title">Еда</h2>
+                    <p class="features__text">
+                        Всегда заказывайте 
+                        фирменный бургер,<br> 
+                        вы не разочаруетесь!
+                    </p>
+                </div>
+
+                <div class="features__item">
+                    <i class="features__icon features__icon_suvenire"></i>
+                    <h2 class="features__title">Сувениры</h2>
+                    <p class="features__text">
+                        Не только китайского,
+                        но и местного производства!
+                    </p>
+                </div>
+            </div>
+
+            <div class="features__wrapper features__wrapper_picture">
+                <div class="features__picture">
+                    <picture>
+                        <source 
+                            media="(max-width:320px)" 
+                            srcset="img/photo-bridge-mobile.jpg"
+                        >
+                        <source 
+                            media="(max-width:768px)" 
+                            srcset="img/photo-bridge-tablet.jpg"
+                        >
+                        <img 
+                            src="img/photo-bridge.jpg" 
+                            alt="Мост Дьявола" 
+                            class="features__photo" 
+                        >
+                    </picture>
+                </div>
+
+                <div class="features__item features__item_photo">
+                    <h2 class="features__title">
+                        Там есть мост дьявола
+                    </h2>
+                    <span class="features__number">-№2-</span>
+                    <p class="features__text">
+                        Да, по нему можно пройти!
+                        Если вы осмелитесь, конечно
+                    </p>
+                </div>
+            </div>
+
+            <div class="features__wrapper features__wrapper_bottom">
+                <div class="features__item">
+                    <h2 class="features__title">
+                        Доступность
+                    </h2>
+                    <span class="features__number">-№3-</span>
+                    <p class="features__text">
+                        Достопримечательности
+                        находяться очень близко
+                    </p>
+                </div>
+
+                <div class="features__item">
+                    <h2 class="features__title">
+                        Красивая дорога
+                    </h2>
+                    <span class="features__number">-№4-</span>
+                    <p class="features__text">
+                        Ехать в Седону из Лас-Вегаса 
+                        совсем не скучно!
+                    </p>
+                </div>
+
+                <div class="features__item">
+                    <h2 class="features__title">
+                        Мало туристов
+                    </h2>
+                    <span class="features__number">-№5-</span>
+                    <p class="features__text">
+                        Большинство едет в Гранд Каньон 
+                        и толпяться там!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="search-hotel">
+            <div class="search-hotel__wrapper">
+                <h3 class="search-hotel__title">Заинтересовались?</h3>
+                <p class="search-hotel__text">
+                    Укажите предпологаемые даты поезки,<br>
+                    и мы покажем вам лучшие предложения 
+                    гостиниц в Седоне
+                </p>
+                <a href="hotels.html#" class="btn search-hotel__btn">Найти гостиницу</a>
+            </div>
+        </section>
+
+        <section class="map">
+            <iframe class="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d349398.02219694364!2d-111.99838605877922!3d34.8019179058495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1491393679268" width="1200" height="350" frameborder="0" allowfullscreen>
+            </iframe>
+        </section>
+
+    </main>
+    
+    <footer class="footer container">
+        <div class="footer__wrapper">
+            
+            <a href="#" class="base-link footer__hashtag">#visitsedona</a>
+            
+            <div class="social-btn-wrapper">
+                <a href="#" class="social-btn"> 
+                    <i class="social-btn__icon social-btn__icon_twitter"></i>
+                </a>
+                <a href="#" class="social-btn ">
+                    <i class="social-btn__icon social-btn__icon_facebook"></i>
+                </a>
+                <a href="#" class="social-btn">
+                    <i class="social-btn__icon social-btn__icon_youtube"></i>
+                </a>
+            </div>
+
+            <div class="copyright">
+                <a class="copyright__link base-link" href="http://alicedesign.ru/">
+                   Alisa Filatova
+                </a> 
+                for 
+                <a class="copyright__logo-academy" href="https://htmlacademy.ru/"></a>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="js/main-nav.js"></script>
+
+</body>
+</html>

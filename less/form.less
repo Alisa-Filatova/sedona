@@ -1,0 +1,237 @@
+@import 'variables';
+@import 'colors';
+@import 'common';
+@import 'components/base';
+@import 'components/controls/btn';
+@import 'components/controls/checkbox';
+@import 'components/controls/radio-btn';
+@import 'components/controls/input-text';
+
+
+.main-page {
+
+    &__heading {
+        padding-top: 80px;
+        padding-bottom: 40px;
+    }
+
+    &__title {
+        font-size: 30px;
+
+        @media(max-width:@screen_mobile) {
+            font-size: 21px;
+        }
+    }
+
+    &__text {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 10px;
+    }
+}
+
+.form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 960px;
+    margin: 0 auto;
+
+    &__title {
+        font-size: 21px;
+        line-height: 25px;
+        font-weight: 700;
+        padding: 0 35px;
+        text-align: center;
+
+        &_name,
+        &_impression {
+            padding: 0;
+        }
+
+        @media(max-width:@screen_mobile) {
+            font-size: 18px;
+            padding: 0;
+        }
+    }
+
+    &__fieldset {
+        border: none;
+        border-top: 2px solid @grey_light;
+
+        &_attractions {
+            flex-grow: 3;
+
+            @media(max-width:@screen_tablet) {
+               flex-basis: 400px;
+               flex-grow: 0.4;
+            }
+        }
+
+        &_contacts {
+            flex-grow: 4;
+        }
+
+        &_impression,
+        &_name {
+            border: none;
+        }
+
+        @media(max-width:@screen_mobile) {
+            border: none;
+        }
+    }
+
+    &__list {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        margin-top: 32px;
+
+        &_contacts {
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        &_attractions {
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            @media(max-width:@screen_mobile) {
+                max-width: 200px;
+                margin: 20px auto;
+            }
+        }
+
+        &_name {
+           align-items: flex-end;
+        }
+
+        @media(max-width:@screen_mobile) {
+            margin-top: 20px;
+        }
+    }
+
+    &__submit {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-basis: 940px;
+        margin: 55px 0;
+
+        @media(max-width:@screen_tablet) {
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+
+        @media(max-width:@screen_mobile) {
+            margin: 0;
+        }
+    }
+
+    &__list-item {
+        margin-bottom: 25px;
+    }
+
+    &__radio-btn,
+    &__checkbox {
+        margin-right: 20px;
+    }
+
+    &__textarea {
+        width: 900px;
+        height: 140px;
+        margin-top: 50px;
+
+        @media(max-width:@screen_tablet) {
+            width: 600px;
+        }
+
+        @media(max-width:@screen_mobile) {
+            width: 230px;
+            margin-top: 20px;
+        }
+    }
+
+    &__input {
+
+        &_name {
+
+            @media(max-width:@screen_tablet) {
+                width: 150px;
+            }
+        }
+
+        &_phone {
+            background-image: url('../img/phone.png');
+            background-repeat: no-repeat;
+            background-position: 95%;
+
+            @media(max-width:@screen_tablet) {
+                width: 648px;
+            }
+
+            @media(max-width:@screen_mobile) {
+                width: 250px;
+            }
+
+        }
+
+        &_e-mail {
+            background-image: url('../img/mail.png');
+            background-repeat: no-repeat;
+            background-position: 95%;
+
+            @media(max-width:@screen_tablet) {
+                width: 648px;
+            }
+
+            @media(max-width:@screen_mobile) {
+                width: 250px;
+            }
+        }
+    }
+
+    &__btn {
+        border: none;
+        font-family: @font-family_base;
+        text-transform: uppercase;
+        padding: 15px 130px;
+
+        @media(max-width:@screen_mobile) {
+            padding: 15px 43px;
+        }
+    }
+
+    &__label { 
+        cursor: pointer;
+
+        &_impression,
+        &_attractions {
+            text-transform: none;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        @media(max-width:@screen_tablet) {
+            font-size: 21px;
+        }
+
+        @media(max-width:@screen_mobile) {
+            font-size: 16px;
+        }
+    }
+
+    &__correction {
+
+        @media(max-width:@screen_tablet) {
+            margin-top: 20px;
+        }
+    }
+}

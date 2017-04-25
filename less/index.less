@@ -1,0 +1,170 @@
+@import 'variables';
+@import 'colors';
+@import 'common';
+@import 'components/base';
+@import 'components/controls/btn';
+
+
+.main-page {
+
+    &__heading {
+        padding-top: 50px;
+        padding-bottom: 50px;
+
+        @media(max-width: @screen_mobile) {
+            padding-bottom: 0;
+        }
+    }
+
+    &__title {
+        font-size: 21px;
+        line-height: 26px;
+        font-weight: 700;
+        color: @black;
+        margin-bottom: 30px;
+
+        @media(max-width: @screen_mobile) {
+            margin-top: 40px;
+            padding: 0 30px;
+            font-size: 18px;
+        }
+    }
+}
+
+.features {
+    display: flex;
+    flex-direction: column;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        max-height: 248px;
+        overflow: hidden;
+
+        &_bottom {
+            background: @grey;
+        }
+
+        @media(max-width:@screen_mobile) {
+            flex-direction: column;
+            max-height: none;
+        }
+    }
+
+    &__item {
+        padding: 42px 46px;
+
+        @media(max-width:@screen_tablet) {
+            padding: 28px 15px;
+        }
+
+        @media(max-width:@screen_mobile) {
+            border-bottom: 1px solid @grey_light;
+        }
+
+        &_photo {
+            background-color: @blue;
+            color: @white;
+        }
+    }
+
+    &__title {
+        font-size: 21px;
+    }
+
+    &__text {
+        max-width: 320px;
+    }
+
+    &__icon {
+        background-image: url('../img/spritesheet2.png');
+        background-repeat: no-repeat;
+        display: inline-block;
+        vertical-align: middle;
+
+        &_home {
+            width: 75px;
+            height: 72px;
+            background-position: -5px -69px;
+        }
+
+        &_food {
+            width: 77px;
+            height: 68px;
+            background-position: -90px -81px;
+        }
+
+        &_suvenire {
+            width: 64px;
+            height: 75px;
+            background-position: -211px -5px;
+        }
+    }
+
+    &__picture {
+
+        @media(max-width:@screen_mobile) {
+            order: 2;
+        }
+    }
+}
+
+
+.search-hotel {
+    padding-bottom: 65px;
+    padding-top: 20px;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 10px;
+    }
+
+    &__title {
+        font-size: 30px;
+        line-height: 35px;
+
+        @media(max-width:@screen_mobile) {
+            font-size: 21px;
+        }
+    }
+
+    &__text {
+        margin-bottom: 40px;
+    }
+
+    &__btn {
+        @media(max-width:@screen_mobile) {
+            padding: 15px 40px;
+            font-size: 18px;
+        }
+    }
+}
+
+.map {
+    overflow: hidden;
+    background-image: url('../img/map-desktop.jpg');
+    background-repeat: no-repeat;
+
+    @media(max-width:@screen_tablet) {
+        background-image: url('../img/map-tablet.jpg');
+    }
+
+    @media(max-width:@screen_mobile) {
+        background-image: url('../img/map-mobile.jpg');
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

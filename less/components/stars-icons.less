@@ -1,0 +1,35 @@
+
+.stars-icon {
+    width: 110px;
+    height: 18px;
+    display: block;
+    background-image: url('../img/spritesheet2.png');
+    background-repeat: no-repeat;
+    margin: 10px;
+    margin-left: auto;
+    margin-right: 0;
+
+
+    &_4 {
+        width: 89px;
+        height: 17px;
+        background-position: -5px -32px;
+    }
+
+    &_3 {
+        width: 65px;
+        height: 17px;
+        background-position: -57px -5px;
+    }
+
+    &_2 {
+        width: 42px;
+        height: 17px;
+        background-position: -5px -5px;
+    }
+
+    @media(max-width: @screen_mobile) {
+        margin-left: 0;
+        margin-right: auto;
+    }
+}
