@@ -73,10 +73,16 @@
        url('../fonts/pt-sans-narrow-v7-latin_cyrillic_cyrillic-ext-700.svg#PTSansNarrow') format('svg'); /* Legacy iOS */
 }
 
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 
 body {
     position: relative;
-    max-width: @screen_desktop;
+    min-width: 320px;
     font-family: 'PT Sans', 'Arial', sans-serif;
     font-weight: 400;
     text-transform: uppercase;
@@ -89,50 +95,17 @@ body {
 
     @media (max-width: @screen_tablet) {
         font-size: 14px;
-        min-width: @screen_tablet;
-    }
-
-    @media (max-width: @screen_mobile) {
-        min-width: @screen_mobile;
     }
 }
 
 .container {
-    width: @container_desktop;
+    max-width: @container_desktop;
     margin: 0 auto;
-    padding: 0 40px;
 
     @media (max-width: @screen_tablet) {
-        width: @container_tablet;
-        margin: 0;
-        padding: 0;
+        width: auto;
     }
 
-    @media (max-width: @screen_mobile) {
-        width: @container_mobile;
-        margin: 0;
-        padding: 0;
-    }
-
-    &__inner {
-        @media (max-width: @screen_desktop) {
-           width: @container_desktop;
-           margin: 0 auto;
-           padding: 0 40px;
-       }
-
-        @media (max-width: @screen_tablet) {
-            width: 648px;
-            padding: 0 60px;
-            margin: 0;
-        }
-
-        @media (max-width: @screen_mobile) {
-            width: 320px;
-            padding: 0;
-            margin: 0;
-        }
-    }
 }
 
 

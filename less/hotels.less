@@ -8,16 +8,28 @@
 @import 'components/controls/filter-switch';
 @import 'components/hotel-item';
 
+.hotels {
+    padding-left: 20px;
+    padding-right: 20px;
+
+    @media (max-width: @screen_tablet) {
+        padding: 0;
+    }
+}
 
 .filter {
 
     &::after {
 
-        @media(max-width: @screen_mobile) {
+        @media (max-width: @screen_mobile) {
             content: url('../img/logotype-mobile.png');
             position: absolute;
             top: -16px;
-            right: 106px;
+            right: 40%;
+        }
+
+        @media (max-width: 398px) {
+            right: 37%;
         }
     }
 
@@ -31,7 +43,7 @@
             font-family: 'PT Sans Narrow', sans-serif;
         }
 
-        @media(max-width: @screen_mobile) {
+        @media (max-width: @screen_mobile) {
             text-align: center;
         }
 
@@ -48,12 +60,12 @@
         background-repeat: no-repeat;
         background-position: top;
 
-        @media(max-width: @screen_tablet) {
+        @media (max-width: @screen_tablet) {
             padding-left: 45px;
             padding-right: 45px;
         }
 
-        @media(max-width: @screen_mobile) {
+        @media (max-width: @screen_mobile) {
             flex-direction: column;
             padding: 30px 73px;
             padding-top: 50px;
@@ -69,7 +81,7 @@
         flex-basis: 360px;
         justify-content: space-between;
 
-        @media(max-width: @screen_mobile) {
+        @media (max-width: @screen_mobile) {
             flex-basis: 405px;
         }
     }
@@ -118,8 +130,7 @@
     }
 
     &__group {
-
-        @media(max-width: @screen_mobile) {
+        @media (max-width: @screen_mobile) {
             width: 106%;
         }
     }
@@ -143,7 +154,12 @@
         line-height: 26px;
         font-weight: 700;
 
-        @media(max-width: @screen_mobile) {
+        @media (max-width: 604px) {
+            margin: auto;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: @screen_mobile) {
             order: 2;
         }
     }
@@ -156,7 +172,12 @@
         justify-content: space-around;
         font-size: 16px;
 
-        @media(max-width: @screen_mobile) {
+        @media (max-width: 604px) {
+            margin: auto;
+            padding: 0;
+        }
+
+        @media (max-width: @screen_mobile) {
             display: none;
         }
     }
@@ -178,27 +199,11 @@
         }
     }
 
-    @media(max-width: @screen_tablet) {
+    @media (max-width: @screen_tablet) {
         justify-content: space-around;
     }
 
-    @media(max-width: @screen_mobile) {
+    @media (max-width: @screen_mobile) {
         justify-content: center;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -55,6 +55,10 @@
             flex-basis: 583px;
             align-items: center;
         }
+
+        @media(max-width: 594px) {
+            justify-content: center;
+        }
     }
 
     &__description {
@@ -90,6 +94,11 @@
 
     @media(max-width: @screen_tablet) {
         padding: 30px 20px;
+    }
+
+    @media(max-width: 604px) {
+        max-width: 320px;
+        margin: auto;
     }
 
     &__photo {

@@ -10,7 +10,7 @@
     position: relative;
     top: 0;
 
-    @media(max-width: @screen_mobile) {
+    @media (max-width: @screen_mobile) {
         top: 52px;
     }
 }
@@ -22,14 +22,10 @@
         border: none;
         width: 23px;
         height: 22px;
-        background-color: @white;
-        background-image: url('../img/spritesheet2.png');
-        background-repeat: no-repeat;
-        background-position: -5px -159px;
+        background: @white url('../img/spritesheet2.png') no-repeat -5px -159px;
         display: none;
 
-
-        @media(max-width: @screen_mobile) {
+        @media (max-width: @screen_mobile) {
             display: block;
             position: absolute;
             top: -36px;
@@ -71,12 +67,11 @@
             transform: rotate(134deg);
         }
 
-        @media(max-width: @screen_mobile) {
+        @media (max-width: @screen_mobile) {
             display: block;
         }
     }
 }
-
 
 .main-nav {
     background-color: @white;
@@ -91,37 +86,52 @@
         position: relative;
         padding: 0;
 
-        @media(max-width: @screen_tablet) {
+
+        @media (max-width: @screen_tablet) {
             font-size: 16px;
         }
 
-        @media(max-width: @screen_mobile) {
+        @media (max-width: @screen_mobile) {
             flex-direction: column;
             align-items: center;
             z-index: 100;
             position: absolute;
             top: -38px;
             left: 0;
+            width: 100%;
             display: none;
         }
 
         &_open {
-
-            @media(max-width: @screen_mobile) {
+            @media (max-width: @screen_mobile) {
                display: block;
             }
+        }
+    }
+
+    &__logo {
+        position: absolute;
+        top: -14px;
+        right: 43%;
+
+        @media (max-width: 1024px) {
+            right: 41%;
+        }
+
+        @media (max-width: 800px) {
+            right: 45%;
         }
     }
 
     &__item {
 
         &_logo {
-            @media(max-width: @screen_mobile) {
+            @media (max-width: 665px) {
                 display: none;
             }
         }
 
-        @media(max-width: @screen_mobile) {
+        @media (max-width: @screen_mobile) {
             align-self: stretch;
             position: static;
             transform: translateY(22px);
@@ -131,6 +141,8 @@
     &__link {
         text-decoration: none;
         color: @black;
+        padding: 24px;
+        margin: 0;
 
         &:hover {
             color: @blue;
@@ -140,6 +152,11 @@
         &:active {
             color: @grey_dark;
             opacity: 0.6;
+        }
+
+        @media(max-width: @screen_tablet) {
+            padding: 0;
+            font-size: 14px;
         }
 
         @media(max-width: @screen_mobile) {
@@ -158,16 +175,6 @@
             }
         }
 
-        &_logo {
-            position: absolute;
-            right: 505px;
-            top: -14px;
-
-            @media(max-width: @screen_tablet) {
-                right: 346px;
-            }
-        }
-
         &_active {
             color: @brown;
         }
@@ -175,25 +182,39 @@
 }
 
 .promo {
-    background-color: @blue_dark;
-    background: url('../img/intro-triangle.png') no-repeat bottom, url('../img/back-desktop.jpg') no-repeat bottom;
+    background: url('../img/intro-triangle.png') no-repeat bottom,
+                url('../img/back-desktop.jpg') no-repeat bottom,
+                @blue_dark;
     padding-top: 75px;
     padding-bottom: 86px;
 
     &::after {
-        @media(max-width: @screen_mobile) {
+        @media (max-width: @screen_mobile) {
             content: url('../img/logotype-mobile.png');
             position: absolute;
             top: -52px;
-            right: 106px;
+            right: 41%;
             z-index: 200;
+        }
+
+        @media (max-width: 425px) {
+            right: 38%;
+        }
+
+        @media (max-width: 375px) {
+            right: 36%;
+        }
+
+        @media (max-width: 320px) {
+            right: 33%;
         }
     }
 
     &_index {
 
-        @media(max-width:@screen_mobile) {
-            background: url('../img/intro-triangle.png') no-repeat bottom, url('../img/back-desktop.jpg') no-repeat top;
+        @media (max-width: @screen_mobile) {
+            background: url('../img/intro-triangle.png') no-repeat bottom,
+                        url('../img/back-desktop.jpg') no-repeat top;
         }
     }
 }
@@ -209,7 +230,7 @@
         justify-content: space-around;
         align-items: center;
 
-        @media(max-width:@screen_mobile) {
+        @media (max-width: @screen_mobile) {
             flex-direction: column;
         }
     }
@@ -225,7 +246,7 @@
     justify-content: space-between;
     min-width: 150px;
 
-    @media(max-width:@screen_mobile) {
+    @media (max-width: @screen_mobile) {
         margin-top: 10px;
         margin-bottom: 10px;
     }

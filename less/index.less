@@ -4,14 +4,13 @@
 @import 'components/base';
 @import 'components/controls/btn';
 
-
 .main-page {
 
     &__heading {
         padding-top: 50px;
         padding-bottom: 50px;
 
-        @media(max-width: @screen_mobile) {
+        @media (max-width: @screen_mobile) {
             padding-bottom: 0;
         }
     }
@@ -23,10 +22,16 @@
         color: @black;
         margin-bottom: 30px;
 
-        @media(max-width: @screen_mobile) {
+        @media (max-width: @screen_mobile) {
             margin-top: 40px;
             padding: 0 30px;
             font-size: 18px;
+        }
+    }
+
+    &__logo {
+        @media (max-width: 500px) {
+            width: 90%;
         }
     }
 }
@@ -46,20 +51,22 @@
             background: @grey;
         }
 
-        @media(max-width:@screen_mobile) {
+        @media (max-width: @screen_mobile) {
             flex-direction: column;
             max-height: none;
         }
     }
 
     &__item {
+        width: 35%;
         padding: 42px 46px;
 
-        @media(max-width:@screen_tablet) {
+        @media (max-width: @screen_tablet) {
             padding: 28px 15px;
         }
 
-        @media(max-width:@screen_mobile) {
+        @media (max-width: @screen_mobile) {
+            width: 100%;
             border-bottom: 1px solid @grey_light;
         }
 
@@ -75,11 +82,11 @@
 
     &__text {
         max-width: 320px;
+        margin: auto;
     }
 
     &__icon {
-        background-image: url('../img/spritesheet2.png');
-        background-repeat: no-repeat;
+        background: url('../img/spritesheet2.png') no-repeat;
         display: inline-block;
         vertical-align: middle;
 
@@ -103,13 +110,13 @@
     }
 
     &__picture {
-
-        @media(max-width:@screen_mobile) {
+        width: 65%;
+        @media (max-width: @screen_mobile) {
             order: 2;
+            width: 100%;
         }
     }
 }
-
 
 .search-hotel {
     padding-bottom: 65px;
@@ -126,7 +133,7 @@
         font-size: 30px;
         line-height: 35px;
 
-        @media(max-width:@screen_mobile) {
+        @media (max-width: @screen_mobile) {
             font-size: 21px;
         }
     }
@@ -136,35 +143,9 @@
     }
 
     &__btn {
-        @media(max-width:@screen_mobile) {
+        @media (max-width: @screen_mobile) {
             padding: 15px 40px;
             font-size: 18px;
         }
     }
 }
-
-.map {
-    overflow: hidden;
-    background-image: url('../img/map-desktop.jpg');
-    background-repeat: no-repeat;
-
-    @media(max-width:@screen_tablet) {
-        background-image: url('../img/map-tablet.jpg');
-    }
-
-    @media(max-width:@screen_mobile) {
-        background-image: url('../img/map-mobile.jpg');
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
