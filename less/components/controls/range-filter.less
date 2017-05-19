@@ -14,11 +14,11 @@
         border: 2px solid @white;
         padding: 10px;
 
-        @media(max-width: @screen_tablet) {
+        @media (max-width: @screen_tablet) {
             width: 100px;
         }
 
-        @media(max-width: @screen_mobile) {
+        @media (max-width: @screen_mobile) {
             width: 140px;
             margin-top: 5px;
         }
@@ -39,36 +39,41 @@
         width: 265px;
         height: 2px;
 
-        @media(max-width: @screen_tablet) {
+        @media (max-width: @screen_tablet) {
             width: 150px;
         }
     }
 
     &__toggle {
         position: absolute;
-        top: -10px;
+        top: -9px;
         width: 5px;
         height: 5px;
         border-radius: 50%;
         background-color: @grey;
         border: 8px solid @white;
         cursor: pointer;
+        transition: all 0.3s linear;
 
         &_min-toggle {
-           left: -1px;
+            left: -1px;
         }
 
         &_max-toggle {
-           right: 90px;
+            right: 13%;
 
-           @media(max-width: @screen_mobile) {
-                right: 30px;
+
+            @media (max-width: @screen_tablet) {
+                right: 19%;
+            }
+
+            @media (max-width: 425px) {
+                right: 42%;
             }
         }
 
          &:hover {
           background-color: @blue;
-          transition: 0.3s;
         }
 
         &:active {

@@ -24,6 +24,7 @@
         @media (max-width: @screen_mobile) {
             content: url('../img/logotype-mobile.png');
             position: absolute;
+            z-index: 1500;
             top: -16px;
             right: 40%;
         }
@@ -53,12 +54,8 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        padding: 30px 73px;
-        padding-bottom: 20px;
-        background-color: @blue_dark;
-        background-image: url('../img/filter-background.jpg');
-        background-repeat: no-repeat;
-        background-position: top;
+        padding: 30px 73px 20px;
+        background: url('../img/filter-background.jpg') no-repeat top @blue_dark;
 
         @media (max-width: @screen_tablet) {
             padding-left: 45px;
@@ -67,8 +64,7 @@
 
         @media (max-width: @screen_mobile) {
             flex-direction: column;
-            padding: 30px 73px;
-            padding-top: 50px;
+            padding: 50px 73px 30px;
             background-color: @white;
             background-position: -50px 48px;
             background-size: cover;
@@ -115,7 +111,7 @@
         }
 
         &:active {
-            text-transform: scale(0.5);
+            text-transform: scale (0.5);
             transition: 0.3s;
         }
     }

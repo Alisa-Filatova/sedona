@@ -461,28 +461,33 @@ body {
 }
 .range-filter__toggle {
   position: absolute;
-  top: -10px;
+  top: -9px;
   width: 5px;
   height: 5px;
   border-radius: 50%;
   background-color: #eeeeee;
   border: 8px solid #ffffff;
   cursor: pointer;
+  transition: all 0.3s linear;
 }
 .range-filter__toggle_min-toggle {
   left: -1px;
 }
 .range-filter__toggle_max-toggle {
-  right: 90px;
+  right: 13%;
 }
-@media (max-width: 566px) {
+@media (max-width: 768px) {
   .range-filter__toggle_max-toggle {
-    right: 30px;
+    right: 19%;
+  }
+}
+@media (max-width: 425px) {
+  .range-filter__toggle_max-toggle {
+    right: 42%;
   }
 }
 .range-filter__toggle:hover {
   background-color: #81b3d2;
-  transition: 0.3s;
 }
 .range-filter__toggle:active {
   background-color: #333333;
@@ -676,6 +681,7 @@ body {
   .filter::after {
     content: url('../img/logotype-mobile.png');
     position: absolute;
+    z-index: 1500;
     top: -16px;
     right: 40%;
   }
@@ -703,12 +709,8 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 30px 73px;
-  padding-bottom: 20px;
-  background-color: #5496bd;
-  background-image: url('../img/filter-background.jpg');
-  background-repeat: no-repeat;
-  background-position: top;
+  padding: 30px 73px 20px;
+  background: url('../img/filter-background.jpg') no-repeat top #5496bd;
 }
 @media (max-width: 768px) {
   .filter__form {
@@ -719,8 +721,7 @@ body {
 @media (max-width: 566px) {
   .filter__form {
     flex-direction: column;
-    padding: 30px 73px;
-    padding-top: 50px;
+    padding: 50px 73px 30px;
     background-color: #ffffff;
     background-position: -50px 48px;
     background-size: cover;
@@ -763,7 +764,7 @@ body {
   transition: 0.3s;
 }
 .filter__btn:active {
-  text-transform: scale(0.5);
+  text-transform: scale 0.5;
   transition: 0.3s;
 }
 .filter__checkbox {
