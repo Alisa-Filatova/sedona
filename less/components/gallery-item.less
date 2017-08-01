@@ -5,15 +5,16 @@
 .gallery-item {
     position: relative;
     z-index: 5;
-
+    line-height: 10px;
+    overflow: hidden;
 
     &__footer {
         position: absolute;
-        bottom: 6px;
+        bottom: 0;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        align-items: flex-end;
+        align-items: center;
         width: 100%;
         z-index: 10;
         text-align: left;
@@ -39,5 +40,6 @@
 
     &__wrapper {
         margin: 10px;
+        line-height: 19px;
     }
 }

@@ -26,7 +26,6 @@
 @font-face {
   font-family: 'PT Sans Narrow', sans-serif;
   src: url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=cyrillic,cyrillic-ext');
-  font-weight: 400, 700;
   font-style: normal;
 }
 /* pt-sans-narrow-regular - latin_cyrillic_cyrillic-ext */
@@ -87,10 +86,10 @@ body {
   background-color: #81b3d2;
   display: inline-block;
   vertical-align: middle;
+  transition: background-color 0.3s linear;
 }
 .social-btn:hover {
   background-color: #669ec0;
-  transition: 0.3s;
 }
 .social-btn:active {
   background-color: #5496bd;
@@ -123,15 +122,15 @@ body {
 }
 .copyright__link {
   margin-right: 10px;
+  transition: all 0.3s linear;
 }
 .copyright__logo-academy {
   width: 27px;
   height: 34px;
-  background-image: url('../img/spritesheet2.png');
-  background-repeat: no-repeat;
-  background-position: -140px -37px;
+  background: url('../img/spritesheet2.png') no-repeat -140px -37px;
   display: inline-block;
   margin-left: 10px;
+  transition: opacity 0.3s linear;
 }
 .copyright__logo-academy:hover {
   opacity: 0.6;
@@ -146,10 +145,10 @@ body {
 .base-link {
   text-decoration: none;
   color: #000000;
+  transition: color 0.3s linear;
 }
 .base-link:hover {
   color: #81b3d2;
-  transition: 0.3s;
 }
 .base-link:active {
   color: rgba(0, 0, 0, 0.5);
@@ -285,10 +284,10 @@ body {
   color: #000000;
   padding: 24px;
   margin: 0;
+  transition: color 0.3s linear;
 }
 .main-nav__link:hover {
   color: #81b3d2;
-  transition: 0.3s;
 }
 .main-nav__link:active {
   color: #333333;
@@ -393,10 +392,10 @@ body {
   padding: 20px 130px;
   border-radius: 3px;
   cursor: pointer;
+  transition: all 0.3s linear;
 }
 .btn:hover {
   background-color: #669ec0;
-  transition: 0.3s;
 }
 .btn:active {
   background-color: #5496bd;
@@ -410,9 +409,7 @@ body {
   height: 22px;
   display: inline-block;
   vertical-align: middle;
-  background-image: url('../img/spritesheet2.png');
-  background-repeat: no-repeat;
-  background-position: -132px -5px;
+  background: url('../img/spritesheet2.png') no-repeat -132px -5px;
   cursor: pointer;
 }
 .filter-checkbox:checked + label span {
