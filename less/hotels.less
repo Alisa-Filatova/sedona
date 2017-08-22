@@ -102,7 +102,7 @@
         font-weight: 300;
         font-family: @font-family_base;
         text-transform: uppercase;
-        margin-top: 10px;
+        margin-top: 40px;
 
         &:hover {
             background-color: transparent;
@@ -194,7 +194,14 @@
            color: @black;
            border: none;
         }
+
+        &_active {
+            color: @blue_dark;
+            font-weight: bold;
+            border-bottom: 1px dotted @black;
+        }
     }
+
 
     @media (max-width: @screen_tablet) {
         justify-content: space-around;

@@ -6,6 +6,8 @@
 
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/hotels.css">
+    <link rel="stylesheet" href="css/range-slider-ui.css">
+    
     <title>Sedona</title>
 </head>
 <body>
@@ -67,6 +69,7 @@
                                 type="checkbox" 
                                 name="infrastructure"
                                 id="pool" 
+                                value="pool"
                                 checked
                             >
                             <label for="pool" class="filter__label">
@@ -79,6 +82,7 @@
                                 class="filter-checkbox" 
                                 type="checkbox" 
                                 name="infrastructure"
+                                value="parking"
                                 id="parking" 
                             >
                             <label for="parking" class="filter__label">
@@ -91,6 +95,7 @@
                                 class="filter-checkbox" 
                                 type="checkbox" 
                                 name="infrastructure"
+                                value="wiFi"
                                 id="wi-fi" 
                             >
                             <label for="wi-fi" class="filter__label">
@@ -109,6 +114,7 @@
                                 type="checkbox" 
                                 name="type"
                                 id="hotel"
+                                value="Гостиница"
                                 checked
                             >
                             <label for="hotel" class="filter__label">
@@ -121,6 +127,7 @@
                                 class="filter-checkbox" 
                                 type="checkbox" 
                                 name="type"
+                                value="Мотель"
                                 id="motel"
                                 checked 
                             >
@@ -134,6 +141,7 @@
                                 class="filter-checkbox" 
                                 type="checkbox" 
                                 name="type"
+                                value="Апартаменты"
                                 id="apartment" 
                                 checked
                             >
@@ -147,39 +155,36 @@
             </div>
             
             <div class="filter__group">
-                <div class="range-filter">
+                <div class="range-wrapper">
                         
-                    <p class="filter__title range-filter__title">
+                    <label for="max-price" class="filter__title range-filter__title">
                         Стоимость в сутки <span class="filter__title_symbol">(&#8381;)</span>:
-                    </p>
+                    </label>
 
-                    <div class="range-filter__price-controls">
+                    <div class="price-controls range-filter__price-controls">
+    
                         <input 
-                            class="range-filter__price-control range-filter__price-control_min-price" 
-                            id="min-price" 
-                            name="min-price" 
                             type="text" 
-                            value="от 0"
+                            class="sliderValue range-filter__price-control
+                            range-filter__price-control_max-price" 
+                            id="min-price" 
+                            data-index="0" 
+                            value="1500"
                         >
+                        —
                         <input 
-                            class="range-filter__price-control
+                            type="text" 
+                            class="sliderValue range-filter__price-control
                             range-filter__price-control_max-price" 
                             id="max-price" 
-                            name="max-price" 
-                            type="text" 
-                            value="до 3 000"
+                            data-index="1" 
+                            value="10000"
                         >
-                    </div>
                        
-                    <div class="range-filter__controls">
-                        <div class="range-filter__scale"></div>
-                        <div
-                            class="range-filter__toggle range-filter__toggle_min-toggle">
-                        </div>
-                        <div 
-                            class="range-filter__toggle range-filter__toggle_active  
-                            range-filter__toggle_max-toggle">
-                        </div>
+                    </div>
+    
+                    <div class="range-filter">
+                        <div id="slider-range"></div>
                     </div>
                 </div>
                 <input type="submit" class="btn filter__btn" value="Показать">
@@ -188,7 +193,6 @@
     </section>
     
     <section class="hotels container">
-
         <nav class="filter-nav container">
             <div class="filter-nav__wrapper">
                 <div class="filter-nav__search-result">
@@ -200,218 +204,24 @@
                         <b class="filter-nav__title">Сортировка:</b>
                     </li>
                     <li class="filter-nav__item">
-                        <a class="filter-nav__link" href="#">По цене</a>
+                        <a class="filter-nav__link filter-nav__link_price" href="#">По цене</a>
                     </li>
                     <li class="filter-nav__item">
-                        <a class="filter-nav__link" href="#">По типу</a>
+                        <a class="filter-nav__link filter-nav__link_type" href="#">По типу</a>
                     </li>
                     <li class="filter-nav__item">
-                        <a class="filter-nav__link" href="#">По рейтингу</a>
+                        <a class="filter-nav__link filter-nav__link_rate" href="#">По рейтингу</a>
                     </li>
                 </ul>
             </div>
             
             <div class="switch-wrapper">
-                <button class="switch switch_active" type="button"></button>
-                <button class="switch switch_rotate" type="button"></button>
+                <button id="switch-up" class="switch switch_active" type="button"></button>
+                <button id="switch-down" class="switch switch_rotate" type="button"></button>
             </div>
         </nav>
-
-        <div class="hotel-item">
-            <div class="hotel-item__wrapper">
-                
-                <picture>
-                    <source 
-                        media="(max-width:768px)" 
-                        srcset="img/amara-resort-mobile.jpg"
-                    >
-                    <img 
-                        class="hotel-item__photo" 
-                        src="img/amara-resort.jpg" 
-                        alt="photo"
-                    >          
-                </picture>
-                
-                <div class="hotel-item__group">
-                    
-                    <a class="base-link" href="#">
-                        <h3 class="hotel-item__title">Amara Resort & Spa</h3>
-                    </a>
-                    <p class="hotel-item__description">
-                        <span class="hotel-item__type">Гостиница</span>  
-                        <span class="hotel-item__price">от 4000 &#8381;</span>
-                    </p>
-                    <div class="hotel-item__btns">
-                        <a class="btn hotel-item__btn" href="#">Подробнее</a>
-                        <a class="btn hotel-item__btn hotel-item__btn_book" href="#">Забронировать</a>
-                    </div>
-                </div>
-            </div>
-            <div class="rate">
-                <i class="stars-icon stars-icon_4"></i>
-                <span class="rate__text">
-                    Рейтинг:
-                    <span class="rate__number">8,5</span>
-                </span>
-            </div>
-        </div>
-
-        <div class="hotel-item">
-            <div class="hotel-item__wrapper">
-                
-                <picture>
-                    <source 
-                        media="(max-width:768px)" 
-                        srcset="img/desert-inn-mobile.jpg"
-                    >
-                    <img 
-                        class="hotel-item__photo" 
-                        src="img/desert-inn.jpg" 
-                        alt="photo"
-                    >     
-                </picture>
-               
-                <div class="hotel-item__group">
-                    
-                    <a class="base-link"  href="#">
-                        <h3 class="hotel-item__title">Desert Quail inn</h3>
-                    </a>
-                    <p class="hotel-item__description">
-                        <span class="hotel-item__type">Мотель</span> 
-                        <span class="hotel-item__price"> от 3000 &#8381;</span>
-                    </p>
-                    <div class="hotel-item__btns">
-                        <a class="btn hotel-item__btn" href="#">Подробнее</a>
-                        <a class="btn hotel-item__btn hotel-item__btn_book" href="#">Забронировать</a>
-                    </div>
-                </div>
-            </div>
-            <div class="rate">
-                <i class="stars-icon stars-icon_3"></i>
-                <span class="rate__text">
-                    Рейтинг:
-                    <span class="rate__number">8,9</span>
-                </span>
-            </div>
-        </div>
-
-        <div class="hotel-item">
-            <div class="hotel-item__wrapper">
-                
-                <picture>
-                    <source 
-                        media="(max-width:768px)" 
-                        srcset="img/cedars-resort-mobile.jpg"
-                    >
-                    <img 
-                        class="hotel-item__photo" 
-                        src="img/cedars-resort.jpg" 
-                        alt="photo"
-                    >  
-                </picture>
-            
-                <div class="hotel-item__group">
-                    
-                    <a class="base-link" href="#">
-                        <h3 class="hotel-item__title">Cedars Resort</h3>
-                    </a>
-                    <p class="hotel-item__description">
-                        <span class="hotel-item__type">Гостиница</span>
-                        <span class="hotel-item__price"> от 3000 &#8381;</span>
-                    </p>
-                    <div class="hotel-item__btns">
-                        <a class="btn hotel-item__btn" href="#">Подробнее</a>
-                        <a class="btn hotel-item__btn hotel-item__btn_book" href="#">Забронировать</a>
-                    </div>
-                </div>
-            </div>
-            <div class="rate">
-                <i class="stars-icon stars-icon_3"></i>
-                <span class="rate__text">
-                    Рейтинг:
-                    <span class="rate__number">8,3</span>
-                </span>
-            </div>
-        </div>
-
-        <div class="hotel-item">
-            <div class="hotel-item__wrapper">
-                
-                <picture>
-                    <source 
-                        media="(max-width:768px)" 
-                        srcset="img/villas-poco-mobile.jpg"
-                    >
-                    <img 
-                        class="hotel-item__photo" 
-                        src="img/villas-poco.jpg" 
-                        alt="photo"
-                    >
-                </picture>
-                
-                <div class="hotel-item__group">
-                    
-                    <a class="base-link" href="#">
-                        <h3 class="hotel-item__title">Villas at Poco Diablo</h3>
-                    </a>
-                    <p class="hotel-item__description">
-                        <span class="hotel-item__type">Апартаменты</span>
-                        <span class="hotel-item__price"> от 2000 &#8381;</span>
-                    </p>
-                    <div class="hotel-item__btns">
-                        <a class="btn hotel-item__btn" href="#">Подробнее</a>
-                        <a class="btn hotel-item__btn hotel-item__btn_book" href="#">Забронировать</a>
-                    </div>
-                </div>
-            </div>
-            <div class="rate">
-                <i class="stars-icon stars-icon_2"></i>
-                <span class="rate__text">
-                    Рейтинг:
-                    <span class="rate__number">9,2</span>
-                </span>
-            </div>
-        </div>
-
-        <div class="hotel-item hotel-item_last-child">
-            <div class="hotel-item__wrapper">
-                
-                <picture>
-                    <source 
-                        media="(max-width:768px)" 
-                        srcset="img/sky-runch-lodge-mobile.jpg"
-                    >
-                    <img 
-                        class="hotel-item__photo" 
-                        src="img/sky-runch-lodge.jpg" 
-                        alt="photo"
-                    >
-                </picture>
-                
-                <div class="hotel-item__group">
-                    
-                    <a class="base-link" href="#">
-                        <h3 class="hotel-item__title">Sky Runch Lodge</h3>
-                    </a>
-                    <p class="hotel-item__description">
-                        <span class="hotel-item__type">Апартаменты</span>
-                        <span class="hotel-item__price"> от 1800 &#8381;</span>
-                    </p>
-                    <div class="hotel-item__btns">
-                        <a class="btn hotel-item__btn" href="#">Подробнее</a>
-                        <a class="btn hotel-item__btn hotel-item__btn_book" href="#">Забронировать</a>
-                    </div>
-                </div>
-            </div>
-            <div class="rate">
-                <i class="stars-icon stars-icon_2"></i>
-                <span class="rate__text">
-                    Рейтинг:
-                    <span class="rate__number">8,7</span>
-                </span>
-            </div>
-        </div>
-
+        
+        <div class="search-result"></div>
     </section>
     
     <footer class="footer container">
@@ -449,8 +259,10 @@
             </div>
         </div>
     </footer>
-
     <script src="js/main-nav.js"></script>
-    
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/hotels.js"></script>
+    <script src="js/range-filter.js"></script>
 </body>
 </html>
