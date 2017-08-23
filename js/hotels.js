@@ -2,7 +2,7 @@ var dataUrl = 'data/hotels.json';
 var $catalogHotels = $('.search-result');
 
 /**
- * Создает разметку отеля
+ * Создает разметку карты отеля
  *
  * @param {Object} item 
  * @return {String}
