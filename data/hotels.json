@@ -3,14 +3,10 @@
     "imageBig": "img/hotels/amara-resort.jpg",
     "imageSmall": "img/hotels/amara-resort-mobile.jpg",
     "type": "Гостиница",
-    "price": 4000,
-    "rate": 8.5,
+    "price": 8000,
+    "rate": 8.1,
     "stars": 4,
-    "infrastructure": {
-        "pool": true,
-        "parking": true,
-        "wiFi": true
-    }
+    "infrastructure": ["pool", "parking", "wiFi"]
   },
   {
     "title": "Desert Quail INN",
@@ -20,11 +16,7 @@
     "price": 3000,
     "rate": 8.9,
     "stars": 3,
-    "infrastructure": {
-        "pool": true,
-        "parking": false,
-        "wiFi": true
-    }
+    "infrastructure": ["pool", "wiFi"]
   },
   {
     "title": "Villas at Poco Diablo",
@@ -34,25 +26,17 @@
     "price": 2000,
     "rate": 9.2,
     "stars": 2,
-    "infrastructure": [{
-        "pool": false,
-        "parking": true,
-        "wiFi": true
-    }]
+    "infrastructure": ["parking", "wiFi"]
   },
   {
     "title": "Cedars Resort",
     "imageBig": "img/hotels/cedars-resort.jpg",
     "imageSmall": "img/hotels/cedars-resort-mobile.jpg",
     "type": "Гостиница",
-    "price": 3000,
-    "rate": 8.3,
+    "price": 5000,
+    "rate": 7.3,
     "stars": 3,
-    "infrastructure": {
-        "pool": true,
-        "parking": false,
-        "wiFi": false
-    }
+    "infrastructure": ["pool"]
   },
   {
     "title": "Sky Runch Lodge",
@@ -60,12 +44,8 @@
     "imageSmall": "img/hotels/sky-runch-lodge-mobile.jpg",
     "type": "Апартаменты",
     "price": 1800,
-    "rate": 8.7,
+    "rate": 5.7,
     "stars": 4,
-    "infrastructure": {
-        "pool": false,
-        "parking": true,
-        "wiFi": false
-    }
+    "infrastructure": ["parking"]
   }
 ]
