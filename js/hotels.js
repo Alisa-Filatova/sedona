@@ -197,7 +197,7 @@ $filterBtn.on('click', function(event) {
             }
         });
         
-        if ($('.hotel-item').length <= 0 ) {
+        if ($('.hotel-item').length <= 0) {
             $catalogHotels.append('<div class="hotel-item__not-found">Не найдено! Измените запрос.</div>');
         }
     }).fail(function() { 
