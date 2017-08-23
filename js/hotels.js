@@ -182,10 +182,6 @@ $filterBtn.on('click', function(event) {
         }
        
         $catalogHotels.empty();    
-        
-        if (hotelType.length <= 0 || infrastructure.length <= 0) {
-            $catalogHotels.append('<div class="hotel-item__not-found">Не найдено! Измените запрос.</div>');
-        }
 
         $.each(data, function(index, item) {
             if (inRange(item.price, minPrice, maxPrice)
@@ -200,6 +196,10 @@ $filterBtn.on('click', function(event) {
                 return;
             }
         });
+        
+        if ($('.hotel-item').length <= 0 ) {
+            $catalogHotels.append('<div class="hotel-item__not-found">Не найдено! Измените запрос.</div>');
+        }
     }).fail(function() { 
         alert('Ошибка загрузки!'); 
     })
